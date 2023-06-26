@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Products from '../Products/Products';
 import OrderSummery from '../OrderSummery/OrderSummery';
+import './Shop.css';
 
 const Shop = () => {
+    const [cart, setCart] = useState([]);
+    const handleAddtoCart = (product) => {
+        setCart([...cart, product])
+    }
     return (
-        <div>
-            <div className="products">
-                <Products/>
-            </div>
-            <div className="order-summery">
-                <OrderSummery/>
-            </div>
+        <div className='shop-container'>
+            <Products handleAddtoCart={handleAddtoCart}/>
+            <OrderSummery cart={cart}/>
         </div>
     );
 };

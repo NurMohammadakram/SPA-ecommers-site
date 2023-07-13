@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Product from '../Product/Product';
 import './Products.css';
 
-const Products = ({handleAddtoCart}) => {
-    const [products, setProducts] = useState([])
-    useEffect(() => {
-        fetch('products.json')
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    } ,[])
+const Products = ({handleAddtoCart, products}) => {
+    
+
+
     return (
         <div className='products-container'>
             {

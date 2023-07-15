@@ -1,0 +1,24 @@
+.cart {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #95a0a7;
+  margin: 10px;
+}
+.cart-infos p, h4{
+  margin: 0 2px;
+}
+.cart-delete-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: rgba(235, 87, 87, 1);
+  background-color: rgba(235, 87, 87, 0.3);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: 12px;
+}

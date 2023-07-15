@@ -1,0 +1,6 @@
+.order-review-container {
+    margin: 100px 140px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 100px;
+}

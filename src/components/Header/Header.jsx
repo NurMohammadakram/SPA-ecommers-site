@@ -1,25 +1,25 @@
 import React from 'react';
 import './Header.css';
-import logo from '../../assets/images/Logo.svg'
-import { Link } from 'react-router-dom';
+import logo from '../../assets/images/Logo.svg';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     return (
         <div className='header-container'>
             <img src={logo} alt="" />
             <nav className='navbar'>
-                <Link to="/">
-                    <li>Shop</li>
-                </Link>
-                <Link to="order">
-                    <li>Order</li>
-                </Link>
-                <Link to="inventory">
-                    <li>Inventory</li>
-                </Link>
-                <Link to="login">
-                    <li>Login</li>
-                </Link>
+                <ActiveLink to="/">
+                    Shop
+                </ActiveLink>
+                <ActiveLink to="order-review">
+                    Order
+                </ActiveLink>
+                <ActiveLink to="inventory">
+                    Inventory
+                </ActiveLink>
+                <ActiveLink to="login">
+                    Login
+                </ActiveLink>
             </nav>
         </div>
     );

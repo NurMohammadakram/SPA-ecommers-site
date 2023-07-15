@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import Shop from "./components/Shop/Shop";
+import OrderReview from "./components/OrderReview/OrderReview";
+import Inventory from "./components/Inventory/Inventory";
+import Login from "./components/Login/Login";
+import cartDataloader from "./utilities/cartDataLoader";
 
 const router = createBrowserRouter([
   {
@@ -15,16 +19,17 @@ const router = createBrowserRouter([
         element: <Shop/>
       },
       {
-        path: "order",
-        element: <div>this is order page</div>
+        path: "order-review",
+        element: <OrderReview/>,
+        loader: cartDataloader,
       },
       {
         path: "inventory",
-        element: <div>This is inventory page</div>
+        element: <Inventory/>,
       },
       {
         path: "login",
-        element: <div>This is login page</div>
+        element: <Login/>,
       },
     ]
   },
